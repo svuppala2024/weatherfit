@@ -46,8 +46,8 @@
 
 .closetlistdiv {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
-    width: 50%
 }
 
 .alldropdownsbutton {
@@ -61,8 +61,21 @@
 }
 
 .listitemdiv {
-    padding: 3%;
-    margin: 5%;
+    padding: 10px;
+    margin: 20px;
+    width: 170px;
+    height: 95px;
     border: 3px solid black;
     border-radius: 10px;
+}
+
+.listdiv {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clothingtext {
+    text-decoration: none;
+    font-family: "Poppins";
 }

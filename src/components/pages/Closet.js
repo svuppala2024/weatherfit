@@ -1,7 +1,12 @@
 import React from "react";
 import "../../App.css";
 import "../pages/Closet.css";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/database';
+import firebaseConfig from '../../firebaseConfig.js';
+
+firebase.initializeApp(firebaseConfig);
 
 function Closet() {
     const [selectedItems, setSelectedItems] = useState([]);
@@ -25,13 +30,41 @@ function Closet() {
 
     const handleAddItem = () => {
         if (selectedMaterial && selectedLength && selectedType && selectedFormality) {
-            setSelectedItems([...selectedItems, [selectedType, selectedMaterial, selectedLength, selectedFormality]]);
+            const newItem = {
+                type: selectedType,
+                material: selectedMaterial,
+                length: selectedLength,
+                formality: selectedFormality
+            };
+        
+            // Reference to the Firebase Realtime Database location to save items
+            const itemsRef = firebase.database().ref('items');
+        
+            // Push the new item to the database
+            itemsRef.push(newItem);
+        
+            // Clear the input fields
             setSelectedType('');
             setSelectedMaterial('');
             setSelectedLength('');
             setSelectedFormality('');
         }
-    }
+    };
+
+    useEffect(() => {
+        // Fetch items from Firebase and update the state
+        const itemsRef = firebase.database().ref('items');
+        itemsRef.on('value', (snapshot) => {
+            const itemsData = snapshot.val();
+            if (itemsData) {
+                const itemsArray = Object.values(itemsData);
+                setSelectedItems(itemsArray);
+            }
+        });
+
+        // Unsubscribe when component unmounts
+        return () => itemsRef.off('value');
+    }, []);
 
     return (
         <div className="total">
@@ -85,7 +118,7 @@ function Closet() {
                         <option value="Business-Casual">Business-Casual</option> 
                         <option value="Athletic">Athletic</option> 
                         <option value="Casual">Casual</option> 
-                        <option value="Formal">formal</option> 
+                        <option value="Formal">Formal</option> 
                     </select>
                 </div>
             </div>
@@ -97,26 +130,39 @@ function Closet() {
             </div> 
             </div>
 
-            <div className="closetlistdiv">
-                <h3>Closet:</h3>
-                <div className="non-bulleted-list">
-                    {selectedItems.map((item, index) => (
-                        <div key={index} className="listitemdiv">
-                            <div>
-                                <span>{item[0]}</span>
-                            </div>
-                            <div>
-                                <span>{item[1]}</span>
-                            </div>
-                            <div>
-                                <span>{item[2]}</span>
-                            </div>
-                            <div>
-                                <span>{item[3]}</span>
-                            </div>
+            <div className="listdiv">
+                {selectedItems.map((item, index) => (
+                    <div key={index} className="listitemdiv">
+                        <div>
+                            <span>
+                                <text className="clothingtext">
+                                    {item.type}
+                                </text>
+                            </span>
                         </div>
-                    ))}
-                </div>
+                        <div>
+                            <span>
+                                <text className="clothingtext">
+                                    {item.material}
+                                </text>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <text className="clothingtext">
+                                    {item.length}
+                                </text>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <text className="clothingtext">
+                                    {item.formality}
+                                </text>
+                            </span>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

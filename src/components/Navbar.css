@@ -25,6 +25,11 @@
     margin-left: 2%;
 }
 
+.navbarlogo:hover{
+    transition: 0.8s ease-out;
+    color: gray
+}
+
 .navlinks-container{
     margin-left: 2%;
 }
@@ -37,10 +42,10 @@
     margin: 20px;
     padding-top: 4px;
     padding-bottom: 4px;
-    border-bottom: 3px solid #F7F7F7;
+    border-bottom: 3px solid black;
 }
 
 .nav-links:hover{
-    transition: all 0.2s ease-out;
+    transition: 0.8s ease-out;
     border-bottom: 3px solid white;
 }

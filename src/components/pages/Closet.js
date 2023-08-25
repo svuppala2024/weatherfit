@@ -69,65 +69,65 @@ function Closet() {
     return (
         <div className="total">
             <div className="alldropdownsbutton">
-            <div className="dropdownlabeldiv">
-                <label className="labelstyle">Type of Clothing:</label> 
-                <div className="dropdowndiv">
-                    <select value={selectedType} onChange={handleTypeChange} className="dropdown"> 
-                        <option></option> 
-                        <option value="Shirt">Shirt</option> 
-                        <option value="Sweater / Hoodie">Sweater / Hoodie</option> 
-                        <option value="Pants / Shorts">Pants / Shorts</option> 
-                        <option value="Dress">Dress</option> 
-                        <option value="Skirt">Skirt</option> 
-                        <option value="Jacket / Coat">Jacket / Coat</option> 
-                    </select>
+                <div className="dropdownlabeldiv">
+                    <label className="labelstyle">Type of Clothing:</label> 
+                    <div className="dropdowndiv">
+                        <select value={selectedType} onChange={handleTypeChange} className="dropdown"> 
+                            <option></option> 
+                            <option value="Shirt">Shirt</option> 
+                            <option value="Sweater / Hoodie">Sweater / Hoodie</option> 
+                            <option value="Pants / Shorts">Pants / Shorts</option> 
+                            <option value="Dress">Dress</option> 
+                            <option value="Skirt">Skirt</option> 
+                            <option value="Jacket / Coat">Jacket / Coat</option> 
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div className="dropdownlabeldiv">
-                <label className="labelstyle">Interior Material of Clothing:</label> 
-                <div className="dropdowndiv">
-                    <select value={selectedMaterial} onChange={handleMaterialChange} className="dropdown"> 
-                        <option></option> 
-                        <option value="Wool">Wool</option> 
-                        <option value="Cotton">Cotton</option> 
-                        <option value="Polyester / Spandex">Polyester / Spandex</option> 
-                        <option value="Linen">Linen</option> 
-                        <option value="Denim">Denim</option> 
-                        <option value="Leather">Leather</option>
-                    </select>
+                <div className="dropdownlabeldiv">
+                    <label className="labelstyle">Material of Clothing:</label> 
+                    <div className="dropdowndiv">
+                        <select value={selectedMaterial} onChange={handleMaterialChange} className="dropdown"> 
+                            <option></option> 
+                            <option value="Wool">Wool</option> 
+                            <option value="Cotton">Cotton</option> 
+                            <option value="Polyester / Spandex">Polyester / Spandex</option> 
+                            <option value="Linen">Linen</option> 
+                            <option value="Denim">Denim</option> 
+                            <option value="Leather">Leather</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div className="dropdownlabeldiv">
-                <label className="labelstyle">Length of Clothing:</label> 
-                <div className="dropdowndiv">
-                    <select value={selectedLength} onChange={handleLengthChange} className="dropdown">
-                        <option></option>  
-                        <option value="Short">Short</option> 
-                        <option value="Long">Long</option> 
-                    </select>
+                <div className="dropdownlabeldiv">
+                    <label className="labelstyle">Length of Clothing:</label> 
+                    <div className="dropdowndiv">
+                        <select value={selectedLength} onChange={handleLengthChange} className="dropdown">
+                            <option></option>  
+                            <option value="Short">Short</option> 
+                            <option value="Long">Long</option> 
+                        </select>
+                    </div>
                 </div>
-            </div>
-            
-            <div className="dropdownlabeldiv">
-                <label className="labelstyle">Formality of Clothing:</label> 
-                <div className="dropdowndiv">
-                    <select value={selectedFormality} onChange={handleFormalityChange} className="dropdown"> 
-                        <option></option> 
-                        <option value="Business-Casual">Business-Casual</option> 
-                        <option value="Athletic">Athletic</option> 
-                        <option value="Casual">Casual</option> 
-                        <option value="Formal">Formal</option> 
-                    </select>
+                
+                <div className="dropdownlabeldiv">
+                    <label className="labelstyle">Formality of Clothing:</label> 
+                    <div className="dropdowndiv">
+                        <select value={selectedFormality} onChange={handleFormalityChange} className="dropdown"> 
+                            <option></option> 
+                            <option value="Business-Casual">Business-Casual</option> 
+                            <option value="Athletic">Athletic</option> 
+                            <option value="Casual">Casual</option> 
+                            <option value="Formal">Formal</option> 
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div className="buttondiv">
-                <button onClick={handleAddItem} className="button">
-                    <text className="buttontext">Add Item to Closet</text>
-                </button>
-            </div> 
+                <div className="buttondiv">
+                    <button onClick={handleAddItem} className="button">
+                        <text className="buttontext">Add Item to Closet</text>
+                    </button>
+                </div> 
             </div>
 
             <div className="listdiv">

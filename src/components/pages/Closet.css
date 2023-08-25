@@ -1,0 +1,68 @@
+.dropdownlabeldiv {
+    display: flex;
+    margin: 3%;
+}
+
+.dropdowndiv {
+    margin-left: 3%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+.labelstyle {
+    font-size: 200%;
+    text-decoration: none;
+    font-family: "Poppins";
+}
+
+.dropdown {
+    height: 100%;
+    width: 100%;
+}
+
+.buttontext {
+    font-size: 240%;
+    text-decoration: none;
+    font-family: "Poppins";
+    display: flex;
+    padding: 1%;
+    margin: auto;
+}
+
+.button {
+    border-radius: 40px;
+    border-width: 5px;
+    display: flex;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+    width: 50%;
+    text-align: center;
+}
+
+.buttondiv {
+    display: flex;
+}
+
+.closetlistdiv {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%
+}
+
+.alldropdownsbutton {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.total {
+    display: flex;
+}
+
+.listitemdiv {
+    padding: 3%;
+    margin: 5%;
+    border: 3px solid black;
+    border-radius: 10px;
+}

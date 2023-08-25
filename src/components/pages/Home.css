@@ -1,16 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
 h1 {
     text-align: center;
     font-size: 100px;
-    margin-bottom: -5px
-    
-  }
- p{
-    text-align: center;
-    font-size: 50px
-
+    margin-bottom: -5px;
+    font-family: "Poppins";
 }
 
-
+p{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Poppins";
+}
 
 .home-container img{
     margin-top: -30px;
@@ -22,18 +23,21 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .home-container h1{
     margin-top: -10px;
+    font-family: "Poppins";
 }
 
 .homepagebutton {
-
-height: 75px;
-width: 100px;
-
+    height: 60px;
+    width: 140px;
+    font-family: "Poppins";
+    font-size: 20px;
+    border: 3px solid white;
+    border-radius: 100px;
+    background-color: #ededed;
 }
 
 .homepagebutton:hover{
@@ -43,4 +47,10 @@ width: 100px;
 
 .threeButtons {
     margin-top: 30px;
+    margin-bottom: 5%;
+}
+
+.description {
+    font-family: "Poppins";
+    font-size: 20px;
 }

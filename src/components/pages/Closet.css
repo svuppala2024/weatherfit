@@ -18,6 +18,11 @@
 .dropdown {
     height: 100%;
     width: 100%;
+    background-color: #ededed;
+    border-width: 0;
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-size: 150%;
 }
 
 .buttontext {
@@ -31,7 +36,8 @@
 
 .button {
     border-radius: 40px;
-    border-width: 5px;
+    background-color: #ededed;
+    border-width: 0;
     display: flex;
     margin-left: 3%;
     margin-right: 3%;
@@ -40,17 +46,24 @@
     text-align: center;
 }
 
+.button:hover{
+    background-color: grey;
+    transition: 0.7s;
+}
+
 .buttondiv {
     display: flex;
 }
 
 .closetlistdiv {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
-    width: 50%
 }
 
 .alldropdownsbutton {
+    margin-top: 2%;
+    margin-left: 2%;
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -61,8 +74,24 @@
 }
 
 .listitemdiv {
-    padding: 3%;
-    margin: 5%;
-    border: 3px solid black;
+    padding: 10px;
+    margin: 20px;
+    width: 190px;
+    height: 115px;
+    background-color: #ededed;
     border-radius: 10px;
+}
+
+.listdiv {
+    width: 800px;
+    margin-top: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clothingtext {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-size: 120%;
 }

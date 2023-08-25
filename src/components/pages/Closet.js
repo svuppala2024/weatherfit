@@ -102,10 +102,18 @@ function Closet() {
                 <div className="non-bulleted-list">
                     {selectedItems.map((item, index) => (
                         <div key={index} className="listitemdiv">
-                            <span>{item[0]}</span> /
-                            <span>{item[1]}</span> /
-                            <span>{item[2]}</span> /
-                            <span>{item[3]}</span>
+                            <div>
+                                <span>{item[0]}</span>
+                            </div>
+                            <div>
+                                <span>{item[1]}</span>
+                            </div>
+                            <div>
+                                <span>{item[2]}</span>
+                            </div>
+                            <div>
+                                <span>{item[3]}</span>
+                            </div>
                         </div>
                     ))}
                 </div>

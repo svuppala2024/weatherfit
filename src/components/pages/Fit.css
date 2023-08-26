@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+.statstext {
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: bold
+}
+
+.statsdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statsitemdiv {
+    margin-top: 2%;
+}
+
+.eventtotaldiv {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eventdropdownlabel {
+    font-size: 40px;
+    font-family: "Poppins";
+}
+
+.eventdropdowndiv {
+    margin-top: 2%;
+}
+
+.eventdropdown {
+    height: 100%;
+    width: 100%;
+    background-color: #ededed;
+    border-width: 0;
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-size: 150%;
+}
+
+.buttonn {
+    border-radius: 40px;
+    background-color: #ededed;
+    border-width: 0;
+    display: flex;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+    width: 20%;
+}
+
+.buttonn:hover{
+    background-color: grey;
+    transition: 0.7s;
+}
+
+.buttontextt {
+    font-size: 30px;
+    text-decoration: none;
+    font-family: "Poppins";
+    display: flex;
+    padding: 1%;
+    margin: auto;
+}
+
+.buttondiv {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.filteredlistitemdiv {
+    padding: 10px;
+    margin: 20px;
+    width: 190px;
+    height: 115px;
+    background-color: #ededed;
+    border-radius: 10px;
+}
+
+.filteredlistdiv {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.filteredclothingtext {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-size: 120%;
+}

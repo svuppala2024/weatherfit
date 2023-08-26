@@ -13,7 +13,7 @@
     margin-top: 10vh;
     background-color: #ededed;
     width: 40%;
-    height: 66vh;
+    height: 76vh;
     border-radius: 20px;
 
 }
@@ -55,30 +55,31 @@ label {
 
 input[type=text] {
     height: 3vh;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 8px;
+    padding: 2%;
+    font-size: 20px;
+    font-family: "Poppins";
+    margin-bottom: 5%;
 }
 input[type=password] {
     height: 3vh;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 8px;
+    padding: 2%;
+    font-size: 20px;
+    font-family: "Poppins";
 }
 
 input[type=submit] {
-    background-color:cornflowerblue;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 6vh;
-    font-size: x-large;
+    font-family: "Poppins";
+    font-size: 25px;
+    background-color: white;
+    border-radius: 15px;
+    height: 7vh;
     width: 20%;
     position: relative;
     left: 40%;
-
+    
 }
-
+.centerpadding {
+    margin-left: 10%;
+}

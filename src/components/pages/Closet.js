@@ -2,6 +2,8 @@ import React from "react";
 import "../../App.css";
 import "../pages/Closet.css";
 import { useState, useEffect } from 'react';
+
+// Used firebase realtime database in our code to store different pieces of clothing permanently
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
 import firebaseConfig from '../../firebaseConfig.js';
@@ -9,6 +11,7 @@ import firebaseConfig from '../../firebaseConfig.js';
 firebase.initializeApp(firebaseConfig);
 
 function Closet() {
+    // Created useState variables for each clothing option and one variable to all all clothes
     const [selectedItems, setSelectedItems] = useState([]);
     const [selectedType, setSelectedType] = useState('');
     const [selectedMaterial, setSelectedMaterial] = useState('');
@@ -28,6 +31,7 @@ function Closet() {
         setSelectedFormality(event.target.value)
     }
 
+    // Creates a new piece of clothing with specified options once all options have been selected on webpage
     const handleAddItem = () => {
         if (selectedMaterial && selectedLength && selectedType && selectedFormality) {
             const newItem = {
@@ -37,7 +41,7 @@ function Closet() {
                 formality: selectedFormality
             };
         
-            // Reference to the Firebase Realtime Database location to save items
+            // Reference Firebase Realtime Database location to save items
             const itemsRef = firebase.database().ref('items');
         
             // Push the new item to the database
@@ -52,7 +56,7 @@ function Closet() {
     };
 
     useEffect(() => {
-        // Fetch items from Firebase and update the state
+        // Fetch items from Firebase and update the states
         const itemsRef = firebase.database().ref('items');
         itemsRef.on('value', (snapshot) => {
             const itemsData = snapshot.val();
@@ -62,12 +66,12 @@ function Closet() {
             }
         });
 
-        // Unsubscribe when component unmounts
         return () => itemsRef.off('value');
     }, []);
 
     return (
         <div className="total">
+            {/* This creates all the drop down menus for clothing options */}
             <div className="alldropdownsbutton">
                 <div className="dropdownlabeldiv">
                     <label className="labelstyle">Type of Clothing:</label> 
@@ -123,6 +127,7 @@ function Closet() {
                     </div>
                 </div>
 
+                {/* This creates the button that runs the add clothing function */}
                 <div className="buttondiv">
                     <button onClick={handleAddItem} className="button">
                         <text className="buttontext">Add Item to Closet</text>
@@ -130,6 +135,8 @@ function Closet() {
                 </div> 
             </div>
 
+            {/* This displays all the clothing boxes by indexing through the array wth total clothing, 
+            the array contains Json data */}
             <div className="listdiv">
                 {selectedItems.map((item, index) => (
                     <div key={index} className="listitemdiv">

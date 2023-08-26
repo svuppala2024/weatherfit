@@ -5,6 +5,7 @@ import logo from "../../components/logo.png"
 import {Link} from "react-router-dom";
 
 function Home() {
+  // Simply greets users by displaying website name and logo
   return (
     <div className="home-container">
       <p>Welcome to...</p>
@@ -12,6 +13,8 @@ function Home() {
       <h1>WeatherFit</h1>
           
       <p2 className="description">Not sure what to wear? WeatherFit does! Click bellow to get started. </p2>
+
+      {/*Creates three buttons to navigate to different pages from home screen*/}
       <div className="threeButtons">
         <Link to="/SignIn" className="nav-links-button">
           <button className="homepagebutton" to="/SignIn" type="button" length="50px" width="50px">Sign In</button>

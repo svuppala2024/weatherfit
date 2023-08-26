@@ -3,6 +3,7 @@ import "../components/Navbar.css";
 import {Link} from "react-router-dom";
 
 function Navbar(){
+    // Creates a navigation bar at the top of the screen to navigate between pages
     return(
         <>
         <nav className="navbar">

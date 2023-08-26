@@ -7,6 +7,7 @@ import SignIn from "./components/pages/SignIn.js";
 import Fit from "./components/pages/Fit.js";
 
 function App() {
+  // This allows user to go to different pages of our site
   return (
     <div>
       <Router>
